@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: courier new, courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+/* Home Page */
+/* Title */
+.title {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+  color: white;
+}
+.title h1 {
+  font-size: 44px;
+}
+.title h2 {
+  font-size: 36px;
+}
+/* Nav */
+.nav {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  margin: 20px 0 20px 0;
+}
+.home,
+.portfolio,
+.about,
+.contact {
+  padding: 20px 40px 20px 40px;
+  color: white;
+  text-decoration: none;
+}
+.home:hover,
+.portfolio:hover,
+.about:hover,
+.contact:hover {
+  background-color: white;
+  color: black;
+}
+/* Main Content */
+main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  flex-direction: row;
+}
+.quote {
+  text-align: center;
+  margin: 10px;
+}
+.images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  flex-direction: row;
+}
+.image-one,
+.image-three {
+  height: 15%;
+  width: 15%;
+  object-fit: contain;
+}
+.image-two {
+  height: 25%;
+  width: 25%;
+  object-fit: contain;
+}
+/* Footer */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 20px;
+
+  background-color: black;
+  color: white;
+}
+/* Smaller Screen Sizes */
+@media (max-width: 500px) {
+  /* Change the layout of the website for screens with a width smaller than 500px */
+  .title {
+    flex-direction: column;
+  }
+  .title h1,
+  .title h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 10px;
+  }
+  .title h2 {
+    font-size: 24px;
+  }
+  .nav {
+    flex-direction: column;
+    height: 10%;
+  }
+  .home,
+  .portfolio,
+  .about,
+  .contact {
+    text-align: center;
+    padding: 20px 80px 20px 80px;
+  }
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .image-one,
+  .image-two,
+  .image-three {
+    width: 100%;
+  }
+}
+
+/* About Page */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  width: 500px;
+}
+/* Smaller Screen Sizes */
+@media (max-width: 500px) {
+  .about-content {
+    font-size: 14px;
+    gap: 10px;
+    width: 300px;
+  }
+}
+
+/* Contact Page */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+}
+.contact-page a {
+  color: black;
+  text-decoration: none;
+}
+.contact-page a:hover {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+.form {
+  text-align: center;
+}
+.yourName,
+.yourEmail,
+.yourMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.user-submit {
+  padding: 10px 40px 10px 40px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.user-submit:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Portfolio Page */
+.portfolio-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  flex-direction: column;
+}
+.row-one,
+.row-two {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.portfolio-one,
+.portfolio-three {
+  height: 10%;
+  width: 10%;
+  object-fit: contain;
+}
+.portfolio-two {
+  height: 15%;
+  width: 15%;
+  object-fit: contain;
+}
+.portfolio-six {
+  height: 12%;
+  width: 12%;
+}
+/*  */
+@media (max-width: 500px) {
+  .portfolio-page {
+    flex-direction: column;
+  }
+
+  .row-one,
+  .row-two {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portfolio-one,
+  .portfolio-three,
+  .portfolio-two,
+  .portfolio-six {
+    width: 100%;
+  }
+}
